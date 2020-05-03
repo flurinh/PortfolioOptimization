@@ -36,11 +36,11 @@ class Optimizer:
         if model_id == 0:
             self.DM = DefaultModel()
             self.model = self.DM.get_model()
+            self.params = self.DM.get_params()
             print("using Default model\n", self.model)
             print("\n\n\n")
         elif model_id == 1:
             pass  # for another model, just use a new model_id
-        self.params = self.DM.get_params()
         self.set_data(k=10 ** R)
         # Training
         if train:
